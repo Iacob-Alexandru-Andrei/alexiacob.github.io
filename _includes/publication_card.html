@@ -1,0 +1,33 @@
+{% assign bib_key = include.key %}
+{% assign meta = include.meta %}
+<article class="ri-pub-card">
+  <header class="ri-pub-card-head">
+    <h3>{{ meta.title | default: bib_key }}</h3>
+  </header>
+
+  {% if meta.award_badge and meta.award_badge != "" %}
+    <p class="ri-pub-badge-row">
+      <span class="ri-badge">{{ meta.award_badge }}</span>
+    </p>
+  {% endif %}
+
+  {% if meta.tagline and meta.tagline != "" %}
+    <p class="ri-pub-tagline">{{ meta.tagline }}</p>
+  {% endif %}
+
+  {% if meta.citation and meta.citation != "" %}
+    <p class="ri-pub-citation">{{ meta.citation }}</p>
+  {% endif %}
+
+  {% if meta.summary and meta.summary != "" %}
+    <p class="ri-pub-summary">{{ meta.summary }}</p>
+  {% endif %}
+
+  {% if meta.artifact_links and meta.artifact_links.size > 0 %}
+    <ul class="ri-artifact-list">
+      {% for artifact in meta.artifact_links %}
+        <li><a href="{{ artifact.url }}" rel="noopener noreferrer">{{ artifact.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

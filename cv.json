@@ -1,0 +1,10 @@
+---
+layout: none
+permalink: /cv.json
+---
+{
+  "profile": {{ site.data.profile | jsonify }},
+  "cv": {{ site.data.cv | jsonify }},
+  "social_links": {{ site.data.social_links | jsonify }},
+  "generated_at": "{{ site.time | date_to_xmlschema }}"
+}

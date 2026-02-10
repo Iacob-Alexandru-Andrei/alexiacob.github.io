@@ -1,0 +1,15 @@
+- label: Email
+  url: mailto:aai30@cam.ac.uk
+  placeholder: false
+- label: CV PDF
+  url: /assets/cv/Alex_Iacob_CV.pdf
+  placeholder: false
+- label: Google Scholar
+  url: https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en
+  placeholder: false
+- label: GitHub
+  url: https://github.com/Iacob-Alexandru-Andrei
+  placeholder: false
+- label: LinkedIn
+  url: https://www.linkedin.com/in/alex-iacob-898775194/
+  placeholder: false

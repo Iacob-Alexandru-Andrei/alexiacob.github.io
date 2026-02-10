@@ -1,0 +1,156 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% --- PACKAGES ---
+\usepackage{hyperref}
+\moderncvstyle{casual} 
+\moderncvcolor{black} 
+\usepackage[scale=0.88, top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry} 
+\usepackage{microtype} 
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[default]{sourcesanspro}
+\usepackage[most]{tcolorbox} 
+
+% --- COLOR CONFIGURATION ---
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55} 
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,     % Internal links
+    urlcolor=black,      % Web links (GitHub, LinkedIn, etc.)
+    citecolor=black,     % Citations
+    anchorcolor=black,
+    pdfborder={0 0 0}    % Removes any boxes around links
+}
+
+% --- FONT COMMANDS ---
+\DeclareTextFontCommand{\textsb}{\bfseries \sourcesansprolight}
+
+% --- TYPOGRAPHY ADJUSTMENTS ---
+\renewcommand*{\namefont}{\Huge \bfseries \sourcesansprolight \upshape}
+\renewcommand*{\titlefont}{\normalsize }
+\renewcommand*{\addressfont}{\small\mdseries\slshape}
+\renewcommand*{\sectionfont}{\Large\bfseries \sourcesansprolight}
+\renewcommand*{\subsectionfont}{\large\bfseries \sourcesansprolight}
+\renewcommand\labelitemi{\textbullet}
+
+% --- CUSTOM COMMANDS ---
+\makeatletter
+\newcommand*{\edentry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\textit{#3}}%
+    \ifthenelse{\equal{#4}{}}{}{, {#4}}%
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    \strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+\makeatother
+
+% --- HEADER CONSTRUCTION ---
+\makeatletter
+\renewcommand*{\makecvtitle}{%
+  \recomputecvlengths%
+  \begin{center}%
+    \namefont{\@firstname\ \@familyname}
+    \\[-0.2em] 
+    \rule{\textwidth}{.25ex}
+    \\[0.2em] 
+    \small
+    \href{mailto:aai30@cam.ac.uk}{aai30@cam.ac.uk} \ \ |\ \ 
+    \href{tel:+447587052460}{+44 7587 052460} \ \ |\ \ 
+    \href{https://github.com/Iacob-Alexandru-Andrei}{GitHub} \ \ |\ \ 
+    \href{https://www.linkedin.com/in/alex-iacob-898775194/}{LinkedIn} \ \ |\ \ 
+    \href{https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en}{Google Scholar}
+  \end{center}%
+  \vspace{-0.5em} 
+}
+\makeatother
+
+% --- DATA ---
+\firstname{Alex}
+\familyname{Iacob}
+\title{Cambridge} 
+
+\begin{document}
+\sourcesanspro
+\maketitle
+
+% --- MODIFIED WIDTH TO FIT "Oral Top 1.8% ICLR" ON ONE LINE ---
+\setlength{\hintscolumnwidth}{3.6cm} 
+\setlength{\separatorcolumnwidth}{0.025\linewidth} 
+\setlength{\maincolumnwidth}{\linewidth-\hintscolumnwidth-\separatorcolumnwidth}
+
+% ================= EDUCATION =================
+\section{Education}
+\edentry[0.5em]{Oct 22--Present}{PhD in Computer Science}{\textsb{University of Cambridge}}{}{}{
+\begin{itemize}[leftmargin=*]%
+  \item Third-year PhD Candidate in Machine Learning Systems. \textsb{Advisor: Dr. Nicholas Lane}.
+  \item Specialization: \textsb{Distributed Optimization} for training foundation models across geo-distributed datacenters under strict bandwidth/VRAM constraints.
+\end{itemize}}
+
+\edentry[0.5em]{Oct 21--Jul 22}{MPhil Advanced Computer Science}{\textsb{University of Cambridge}}{}{}{
+\begin{itemize}[leftmargin=*]%
+  \item \textsb{Distinction (Rank 5/36, 84\%)}. \textsb{Advisor: Dr. Nicholas Lane}.
+  \item Dissertation: \textit{The Local-Global Trade-off in Federated Learning}.  Published at \textsb{EuroMLSys}.
+\end{itemize}}
+
+\edentry[0.5em]{Oct 18--Jul 21}{BSc Computer Science}{\textsb{King's College London}}{}{}{
+\begin{itemize}[leftmargin=*]%
+  \item \textsb{First-Class Honours (85\%)}. Recipient of the \textsb{Undergraduate Research Fellowship Award}.
+\end{itemize}}
+
+% ================= SELECTED PUBLICATIONS =================
+\section{Selected Publications}
+
+% --- UPDATED LABELS: SINGLE ROW FORMAT ---
+\cvitem[0.8em]{\textsb{Oral Top 1.8\% ICLR-25}}{\textsb{Alex Iacob}, et al. ``DEPT: Decoupled Embeddings for Pre-training Language Models''. }
+
+\cvitem[0.8em]{\textsb{Top 3\% ICLR-26}}{\textsb{Alex Iacob}, et al. ``MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates''. }
+
+\cvitem[0.8em]{\textsb{Top 5 \% ICLR-26}}{\textsb{Alex Iacob}, et al. ``DES-LOC: Desynced Low Communication Adaptive Optimizers for Training Foundation Models''.}
+
+\cvitem[0.8em]{\textsb{Best Paper FL@FM}}{\textsb{Alex Iacob}, et al. ``Worldwide Federated Training of Language Models''. Published at the Federated Learning in the Age of Foundation Models venue at \textit{NeurIPS 2024}.}
+
+% ================= WORK EXPERIENCE =================
+\section{Work Experience}
+\cventry[0.8em]{May. 24--Present}{Research Scientist}{Flower Labs}{Cambridge}{}{
+  \begin{itemize}[leftmargin=*]%
+    \item \textbf{Model Training:} Pre-trained \textbf{1-13B} models on \textbf{hundreds of billions of tokens} outperforming baselines such as SmolLM2 and OLMo2 in downstream tasks with matched compute.
+    \item \textbf{Engineering:} Developed the aggregation layer for \textbf{Flower Photon}, unifying \textbf{32 H100 GPUs} across \textbf{4 geo-distributed datacenters} (US/EU) by leveraging \textbf{Local SGD}-based methods.
+   \item \textbf{Research:} Published \textbf{DEPT}, enabling arbitrary vocabulary scaling with limited memory/bandwidth. Created two local-update adaptive optimizers, providing \textbf{convergence guarantees for heterogeneous loss functions}, established new SOTA.
+    \item \textbf{Optimization:} Migrated pre-training codebase to \textbf{torchtitan} and \textbf{torchft}. Achieving a \textbf{4x wall-clock speedup} over baseline Python implementation. 
+  \end{itemize}}
+
+\cventry[0.8em]{Jan. 23--Present}{Teaching Assistant}{University of Cambridge}{}{}{
+  \begin{itemize}[leftmargin=*]%
+    \item Authored the primary lab codebase for the university's \textsb{first} Federated Learning course.
+  \end{itemize}}
+
+\cventry[0.8em]{Jun. 20--Oct. 22}{Undergraduate Research Fellow}{King's College London}{}{}{
+\begin{itemize}[leftmargin=*]%
+  \item Applied computational social choice techniques to \textsb{multi-agent system decision-making}.
+\end{itemize}}
+
+% ================= TECHNICAL SKILLS =================
+\section{Technical Skills}
+\cvitem{Tools}{PyTorch, \textsb{torchtitan}, \textsb{torchft}, Docker, WandB, Slurm, Hydra}
+\cvitem{Distributed ML}{4D Parallelism (FSDP/TP/PP/SP), Multi-Node Training, Local SGD}
+\cvitem{Research Areas}{Optimizer Design, Mixture-of-Experts,  Distributed LLM Pre-training, Unlearning}
+
+% ================= EXTENDED PUBLICATIONS =================
+\section{Extended Publications}
+
+\cvitem[0.3em]{MLSys '25}{L. Sani, \textsb{Alex Iacob}, et al. ``Photon: Federated LLM Pre-Training''.}
+
+\cvitem[0.3em]{NeurIPS '25}{W. F. Shen, X. Qiu, M. Kurmanji, \textsb{Alex Iacob}, et al. ``LLM Unlearning via Neural Activation Redirection''.}
+
+\cvitem[0.3em]{ICLR '26}{W. Zhao, Y. Chen, W. Ma, Y. Tang, S. Hu, S. X. Hu, \textsb{Alex Iacob}, et al. ``Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods''.}
+
+\cvitem[0.3em]{NeurIPS FL@FM '24}{L. Sani, \textsb{Alex Iacob}, et al. ``The Future of Large Language Model Pre-training is Federated''. }
+
+\cvitem[0.3em]{MobiUK '23}{\textsb{Alex Iacob}, et al. ``Robust and private multi-modal federated human activity recognition''.}
+
+\cvitem[0.3em]{MLSys On-device '23}{\textsb{Alex Iacob}, et al. ``Privacy in multimodal federated human activity recognition''. In: \textit{3rd On-Device Intelligence Workshop}, \textit{MLSys ’23}.}
+
+\end{document}

@@ -1,0 +1,25 @@
+---
+layout: none
+permalink: /bio.txt
+---
+{{ site.data.profile.name }}
+{{ site.data.profile.headline }}
+{{ site.data.profile.institution }}
+{{ site.data.profile.location }}
+
+Summary:
+{{ site.data.profile.summary }}
+
+About:
+{% for paragraph in site.data.profile.about %}
+- {{ paragraph }}
+{% endfor %}
+
+Research interests:
+{% for interest in site.data.profile.research_interests %}
+- {{ interest }}
+{% endfor %}
+
+Contact:
+Email: {{ site.data.profile.email }}
+Website: {{ site.url }}

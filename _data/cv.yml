@@ -1,0 +1,72 @@
+education:
+  - period: Oct 2022 - Present
+    degree: PhD in Computer Science
+    institution: University of Cambridge
+    details:
+      - Third-year PhD candidate in Machine Learning Systems
+      - Advisor: Dr. Nicholas Lane
+      - Focus: machine learning methods, optimization, and scalable model training
+
+  - period: Oct 2021 - Jul 2022
+    degree: MPhil in Advanced Computer Science
+    institution: University of Cambridge
+    details:
+      - Distinction (Rank 5/36, 84%)
+      - Dissertation on local-global trade-offs in federated learning
+
+  - period: Oct 2018 - Jul 2021
+    degree: BSc in Computer Science
+    institution: King's College London
+    details:
+      - First-Class Honours (85%)
+      - Undergraduate Research Fellowship Award
+
+experience:
+  - period: May 2024 - Present
+    role: Research Scientist
+    organization: Flower Labs
+    bullets:
+      - Trained and evaluated language models in the 1B to 13B scale across distributed infrastructure.
+      - Built aggregation infrastructure connecting 32 H100 GPUs across multiple datacenters.
+      - Developed optimization and representation methods for efficient, resource-aware training.
+
+  - period: Jan 2023 - Present
+    role: Teaching Assistant
+    organization: University of Cambridge
+    bullets:
+      - Authored core lab material for Cambridge machine learning and federated learning coursework.
+
+  - period: Jun 2020 - Oct 2022
+    role: Undergraduate Research Fellow
+    organization: King's College London
+    bullets:
+      - Worked on multi-agent decision-making and computational social choice.
+
+skills:
+  - category: Tools
+    items:
+      - PyTorch
+      - TorchTitan
+      - TorchFT
+      - Docker
+      - Weights and Biases
+      - Slurm
+      - Hydra
+  - category: Distributed ML
+    items:
+      - FSDP
+      - Tensor and pipeline parallelism
+      - Multi-node training
+      - Local SGD
+  - category: Research Areas
+    items:
+      - Optimizer design
+      - Mixture-of-Experts systems
+      - Distributed LLM pre-training
+      - Machine unlearning
+
+selected_publications:
+  - DEPT: Decoupled Embeddings for Pre-training Language Models (ICLR 2025 Oral)
+  - MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates (ICLR 2026)
+  - DES-LOC: Desynced Low Communication Adaptive Optimizers (ICLR 2026)
+  - The Future of Large Language Model Pre-training is Federated (NeurIPS FL@FM Best Paper)

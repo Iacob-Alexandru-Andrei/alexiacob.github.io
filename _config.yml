@@ -1,0 +1,129 @@
+title: Alex Iacob | ML Research Scientist
+about_title: About
+first_name: Alex
+middle_name:
+last_name: Iacob
+contact_note: >-
+  For research collaborations and internship opportunities, email is the
+  preferred contact channel.
+description: >-
+  Personal research website for Alex Iacob, focused on machine learning
+  research, optimization, and scalable model training.
+footer_text: >-
+  Built with Jekyll and al-folio. Hosted on GitHub Pages.
+keywords: machine learning research, optimization, foundation models, scalable training
+lang: en
+icon: A
+social:
+  name: Alex Iacob
+  links:
+    - https://github.com/Iacob-Alexandru-Andrei
+    - https://www.linkedin.com/in/alex-iacob-898775194/
+    - https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en
+
+url: "https://alexiacob.github.io"
+baseurl: ""
+last_updated: false
+back_to_top: true
+
+remote_theme: alshedivat/al-folio
+
+navbar_fixed: true
+footer_fixed: false
+search_enabled: false
+socials_in_search: false
+posts_in_search: true
+bib_search: false
+enable_navbar_social: false
+enable_darkmode: true
+enable_math: false
+enable_progressbar: false
+enable_tooltips: false
+enable_medium_zoom: false
+enable_masonry: false
+serve_og_meta: true
+serve_schema_org: true
+max_width: 1180px
+
+blog_name: Alex Iacob Research Blog
+blog_description: Notes on machine learning research, optimization, and model development
+permalink: /blog/:year/:title/
+
+collections:
+  linkedin_posts:
+    output: true
+    permalink: /social/linkedin/:slug/
+  x_posts:
+    output: true
+    permalink: /social/x/:slug/
+  news:
+    defaults:
+      layout: post
+    output: true
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+include:
+  - _pages
+exclude:
+  - vendor
+  - Gemfile.lock
+
+plugins:
+  - jekyll-3rd-party-libraries
+  - jekyll-cache-bust
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll/scholar
+  - jekyll-socials
+  - jekyll-toc
+  - jemoji
+
+third_party_libraries:
+  download: false
+  jquery:
+    integrity:
+      js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+  mdb:
+    integrity:
+      css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+      js: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+  google_fonts:
+    url:
+      fonts: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+
+scholar:
+  source: ./_bibliography
+  bibliography: papers.bib
+  query: "@*"
+  sort_by: year
+  order: descending
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      seo:
+        links:
+          - https://github.com/Iacob-Alexandru-Andrei
+          - https://www.linkedin.com/in/alex-iacob-898775194/
+          - https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en
+  - scope:
+      path: ""
+      type: linkedin_posts
+    values:
+      layout: social_item
+  - scope:
+      path: ""
+      type: x_posts
+    values:
+      layout: social_item

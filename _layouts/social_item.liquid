@@ -1,0 +1,24 @@
+---
+layout: page
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.channel %} &middot; {{ page.channel | upcase }}{% endif %}
+    </p>
+    {% if page.external_url and page.external_url != "" %}
+      <p class="post-description">
+        <a href="{{ page.external_url }}">Open original social post</a>
+      </p>
+    {% else %}
+      <p class="post-description">
+        Add <code>external_url</code> in this file front matter.
+      </p>
+    {% endif %}
+  </header>
+  <article>
+    {{ content }}
+  </article>
+</article>

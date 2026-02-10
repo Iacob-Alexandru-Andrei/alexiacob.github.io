@@ -1,0 +1,11 @@
+<ul class="social-list">
+  {% for social in site.data.social_links %}
+    <li class="social-item{% if social.placeholder %} social-item-placeholder{% endif %}">
+      {% if social.placeholder %}
+        <span>{{ social.label }} (configure)</span>
+      {% else %}
+        <a href="{{ social.url }}" rel="noopener noreferrer">{{ social.label }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

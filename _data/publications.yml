@@ -1,0 +1,151 @@
+- id: dept-iclr-2025
+  title: "DEPT: Decoupled Embeddings for Pre-training Language Models"
+  authors:
+    - Alex Iacob
+    - Lorenzo Sani
+    - Meghdad Kurmanji
+    - Bill Shen
+    - Xinchi Qiu
+    - Dongqi Cai
+    - Yan Gao
+    - Nicholas Lane
+  venue: ICLR
+  year: 2025
+  month: 4
+  date: "2025-04-01"
+  featured: true
+  featured_rank: 1
+  award: "ICLR 2025 Oral (Top 1.8%)"
+  artifact_links:
+    - label: Paper
+      url: https://lnkd.in/eDkR7rdC
+    - label: Blog
+      url: https://lnkd.in/eC7qaKbE
+  summary: >-
+    Introduces decoupled embeddings to reduce memory pressure and improve flexibility
+    for distributed pre-training with heterogeneous vocabularies.
+
+- id: mtdao-iclr-2026
+  title: "MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates"
+  authors:
+    - Alex Iacob
+    - Lorenzo Sani
+    - Andrej Jovanovic
+    - Mher Safaryan
+    - Meghdad Kurmanji
+    - Samuel Horvath
+    - Paris Giampouras
+    - Bill Shen
+    - Xinchi Qiu
+    - Preslav Aleksandrov
+    - Nicholas Lane
+  venue: ICLR
+  year: 2026
+  month: 1
+  date: "2026-01-01"
+  featured: true
+  featured_rank: 2
+  award: "ICLR 2026 (Top 3%)"
+  artifact_links: []
+  summary: >-
+    Proposes a multi-timescale optimizer update scheme that improves convergence
+    behavior under local-update communication constraints.
+
+- id: desloc-iclr-2026
+  title: "DES-LOC: Desynced Low Communication Adaptive Optimizers for Training Foundation Models"
+  authors:
+    - Alex Iacob
+    - Lorenzo Sani
+    - Andrej Jovanovic
+    - Mher Safaryan
+    - Meghdad Kurmanji
+    - Samuel Horvath
+    - Paris Giampouras
+    - Bill Shen
+    - Xinchi Qiu
+    - Preslav Aleksandrov
+    - Nicholas Lane
+  venue: ICLR
+  year: 2026
+  month: 1
+  date: "2026-01-01"
+  featured: true
+  featured_rank: 3
+  award: "ICLR 2026 (Top 5%)"
+  artifact_links: []
+  summary: >-
+    Develops adaptive optimizers that reduce synchronization and communication overhead
+    while preserving training quality in low-bandwidth distributed settings.
+
+- id: future-federated-pretraining-neurips-2024
+  title: "The Future of Large Language Model Pre-training is Federated"
+  authors:
+    - Lorenzo Sani
+    - Alex Iacob
+    - Collaborators
+  venue: NeurIPS FL@FM Workshop
+  year: 2024
+  month: 12
+  date: "2024-12-01"
+  featured: true
+  featured_rank: 4
+  award: "Best Paper"
+  artifact_links: []
+  summary: >-
+    Examines federated approaches for pre-training language models and highlights
+    practical system-level trade-offs for distributed model training.
+
+- id: photon-mlsys-2025
+  title: "Photon: Federated LLM Pre-Training"
+  authors:
+    - Lorenzo Sani
+    - Alex Iacob
+    - Collaborators
+  venue: MLSys
+  year: 2025
+  month: 5
+  date: "2025-05-01"
+  featured: false
+  featured_rank: 99
+  award: ""
+  artifact_links: []
+  summary: >-
+    Presents a federated pre-training system for large language models with a focus
+    on practical deployment and throughput in distributed infrastructure.
+
+- id: unlearning-neurips-2025
+  title: "LLM Unlearning via Neural Activation Redirection"
+  authors:
+    - W. F. Shen
+    - Xinchi Qiu
+    - Meghdad Kurmanji
+    - Alex Iacob
+    - Collaborators
+  venue: NeurIPS
+  year: 2025
+  month: 12
+  date: "2025-12-01"
+  featured: false
+  featured_rank: 99
+  award: ""
+  artifact_links: []
+  summary: >-
+    Studies targeted unlearning strategies for language models by redirecting neural
+    activation patterns during adaptation.
+
+- id: multimodal-federated-har-2023
+  title: "Robust and Private Multimodal Federated Human Activity Recognition"
+  authors:
+    - Alex Iacob
+    - Collaborators
+  venue: MobiUK
+  year: 2023
+  month: 1
+  date: "2023-01-01"
+  featured: false
+  featured_rank: 99
+  award: ""
+  artifact_links: []
+  summary: >-
+    Investigates privacy-preserving multimodal federated learning methods for human
+    activity recognition tasks.

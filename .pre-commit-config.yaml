@@ -1,0 +1,24 @@
+default_install_hook_types: [pre-commit, pre-push, commit-msg]
+
+repos:
+  - repo: local
+    hooks:
+      - id: global-writing-check
+        name: Global writing check (alex_website)
+        entry: ../scripts/writing/check.sh --target alex_website --report text
+        language: system
+        pass_filenames: false
+        stages: [pre-commit, pre-push]
+
+      - id: global-writing-commit-msg
+        name: Global commit message policy
+        entry: python3 ../scripts/guardrails/validate_commit_msg.py --commit-msg-file
+        language: system
+        stages: [commit-msg]
+
+      - id: global-writing-agent-hook
+        name: Global writing agent hook (alex_website, optional)
+        entry: bash -lc 'if [ "${GLOBAL_WRITING_AGENT_HOOK:-0}" = "1" ]; then ../scripts/writing/agents/run_pipeline.sh --repo alex_website --mode review --hook; else echo "[skip] set GLOBAL_WRITING_AGENT_HOOK=1 to enable agent hook"; fi'
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]

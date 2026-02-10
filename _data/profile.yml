@@ -1,0 +1,27 @@
+name: Alex Iacob
+headline: ML Research Scientist and PhD Candidate
+institution: University of Cambridge
+location: Cambridge, United Kingdom
+email: aai30@cam.ac.uk
+summary: >-
+  I am an ML Research Scientist working on optimization and large-scale model
+  training across geographically distributed infrastructure.
+about:
+  - >-
+    I am a third-year PhD candidate in Computer Science at the University of
+    Cambridge, advised by Dr. Nicholas Lane, and a Research Scientist at Flower Labs.
+  - >-
+    My research spans machine learning methods from optimization to systems-aware
+    training across long-distance distributed settings, with a focus on making
+    large-model development efficient and reliable.
+  - >-
+    I build practical training methods, analyze convergence and robustness, and
+    publish work that can transfer from research settings into production ML workloads.
+research_interests:
+  - Machine learning optimization and training dynamics
+  - Foundation models and efficient adaptation
+  - Scalable and distributed ML systems
+  - Reliable deployment of large-scale ML workloads
+affiliations:
+  - University of Cambridge
+  - Flower Labs
