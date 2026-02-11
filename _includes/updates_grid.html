@@ -1,0 +1,63 @@
+{% assign items = include.items %}
+{% assign excerpt_chars = include.excerpt_chars | default: 180 %}
+{% assign empty_variant = include.empty_variant | default: "card" %}
+{% assign has_items = false %}
+{% if items and items.size > 0 %}
+  {% assign has_items = true %}
+{% endif %}
+
+{% if has_items %}
+  <div class="ri-grid ri-updates-grid">
+    {% if include.limit %}
+      {% for item in items limit: include.limit %}
+        {% include update_card.html item=item excerpt_chars=excerpt_chars %}
+      {% endfor %}
+    {% else %}
+      {% for item in items %}
+        {% include update_card.html item=item excerpt_chars=excerpt_chars %}
+      {% endfor %}
+    {% endif %}
+
+    {% if include.cta_title and include.cta_href %}
+      {% assign cta_href = include.cta_href %}
+      {% assign cta_prefix = include.cta_href | slice: 0, 1 %}
+      {% if cta_prefix == "/" %}
+        {% assign cta_href = include.cta_href | relative_url %}
+      {% endif %}
+      <article class="ri-update-card ri-update-card--cta ri-cta-card">
+        <h3><a href="{{ cta_href }}">{{ include.cta_title }}</a></h3>
+        {% if include.cta_text %}
+          <p>{{ include.cta_text }}</p>
+        {% endif %}
+      </article>
+    {% endif %}
+  </div>
+{% else %}
+  {% if empty_variant == "panel" %}
+    <div class="ri-panel ri-empty-state">
+      <h2>{{ include.empty_title | default: "No updates available yet" }}</h2>
+      <p>{{ include.empty_text | default: "Publish a news item, blog post, or synced social entry to populate this stream." }}</p>
+    </div>
+  {% else %}
+    <div class="ri-grid ri-updates-grid">
+      <article class="ri-update-card">
+        <h3>{{ include.empty_title | default: "No updates yet" }}</h3>
+        <p>{{ include.empty_text | default: "Run the sync script to ingest LinkedIn and X items, or publish blog/news entries." }}</p>
+      </article>
+
+      {% if include.cta_title and include.cta_href %}
+        {% assign cta_href = include.cta_href %}
+        {% assign cta_prefix = include.cta_href | slice: 0, 1 %}
+        {% if cta_prefix == "/" %}
+          {% assign cta_href = include.cta_href | relative_url %}
+        {% endif %}
+        <article class="ri-update-card ri-update-card--cta ri-cta-card">
+          <h3><a href="{{ cta_href }}">{{ include.cta_title }}</a></h3>
+          {% if include.cta_text %}
+            <p>{{ include.cta_text }}</p>
+          {% endif %}
+        </article>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}

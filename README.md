@@ -11,6 +11,20 @@ Personal research website rebuilt with **al-folio as the core theme**.
   - `_x_posts/*`
 - RSS feed at `/feed.xml`.
 
+## Content Editing
+
+Use the focused guide for day-to-day content updates:
+
+- `docs/content-editing.md`
+
+Quick pointers:
+
+- Home copy and CTA order: `_data/home.yml`
+- Profile/bio text: `_data/profile.yml`
+- Featured paper cards: `_data/featured_publications.yml` and `_data/publication_meta.yml`
+- Full publications list: `_bibliography/papers.bib`
+- New blog posts: start from `templates/blog-post-template.md` and add files under `_posts/`
+
 ## Local Development
 
 Use Homebrew Ruby 3.3 + Bundler 2.3.25:

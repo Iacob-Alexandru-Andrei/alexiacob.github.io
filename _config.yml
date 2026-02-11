@@ -41,6 +41,8 @@ enable_progressbar: false
 enable_tooltips: false
 enable_medium_zoom: false
 enable_masonry: false
+# TODO(memory): If re-enabling optional interactive features (search, charts, maps, math, etc.),
+# ensure required local adapter scripts in assets/js are restored or sourced upstream.
 serve_og_meta: true
 serve_schema_org: true
 max_width: 1180px
@@ -69,6 +71,16 @@ kramdown:
 include:
   - _pages
 exclude:
+  - README.md
+  - .pre-commit-config.yaml
+  - docs
+  - templates
+  - guardrails
+  - scripts
+  - .bundle
+  - .jekyll-cache
+  - .tmp-home-after.png
+  - .tmp-home-after-2.png
   - vendor
   - Gemfile.lock
 

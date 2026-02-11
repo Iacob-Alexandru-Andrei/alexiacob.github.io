@@ -1,0 +1,23 @@
+<p>
+  Set or edit each post URL in <code>external_url</code> front matter under
+  <code>{{ include.collection_glob_label }}</code>.
+</p>
+
+{% assign entries = include.entries %}
+{% if entries and entries.size > 0 %}
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+        <span>({{ entry.date | date: "%Y-%m-%d" }})</span>
+        {% if entry.external_url and entry.external_url != "" %}
+          <br><a href="{{ entry.external_url }}">Original {{ include.channel_name }} post</a>
+        {% else %}
+          <br><small>Add <code>external_url</code> in this entry's front matter.</small>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>{{ include.empty_text | default: "No social post entries found. Run the sync script." }}</p>
+{% endif %}
