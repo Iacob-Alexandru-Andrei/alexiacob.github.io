@@ -15,7 +15,7 @@ Personal research website rebuilt with **al-folio as the core theme**.
 
 Use the focused guide for day-to-day content updates:
 
-- `/Users/iacobalexandru/projects/global/alexiacob.github.io/docs/content-editing.md`
+- `docs/content-editing.md`
 
 Quick pointers:
 

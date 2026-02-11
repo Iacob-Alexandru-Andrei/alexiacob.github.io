@@ -4,15 +4,11 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT_DIR"
 
-if [[ -x "/opt/homebrew/opt/ruby@3.3/bin/bundle" ]]; then
-  BUNDLE_BIN="/opt/homebrew/opt/ruby@3.3/bin/bundle"
-else
-  BUNDLE_BIN="bundle"
-fi
+BUNDLE_BIN="${BUNDLE_BIN:-bundle}"
 
 echo "[public-surface] building site"
-"$BUNDLE_BIN" _2.3.25_ exec jekyll clean --quiet
-"$BUNDLE_BIN" _2.3.25_ exec jekyll build --quiet
+"$BUNDLE_BIN" exec jekyll clean --quiet
+"$BUNDLE_BIN" exec jekyll build --quiet
 
 fail=0
 for forbidden in _site/README.md _site/docs _site/templates _site/guardrails _site/scripts; do
