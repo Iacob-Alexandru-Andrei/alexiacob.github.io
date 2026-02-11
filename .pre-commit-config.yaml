@@ -22,3 +22,10 @@ repos:
         language: system
         pass_filenames: false
         stages: [pre-commit]
+
+      - id: check-public-surface
+        name: Public surface leakage check
+        entry: bash scripts/guardrails/check_public_surface.sh
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

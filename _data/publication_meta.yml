@@ -1,7 +1,4 @@
 dept-iclr-2025:
-  featured: true
-  featured_rank: 1
-  top_tier: true
   title: "DEPT: Decoupled Embeddings for Pre-training Language Models"
   citation: "Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, Bill Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, Nicholas Lane. ICLR 2025."
   award_badge: "ICLR 2025 Oral (Top 1.8%)"
@@ -16,9 +13,6 @@ dept-iclr-2025:
       url: https://lnkd.in/eC7qaKbE
 
 mtdao-iclr-2026:
-  featured: true
-  featured_rank: 2
-  top_tier: true
   title: "MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates"
   citation: "Alex Iacob, Lorenzo Sani, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Samuel Horvath, Paris Giampouras, Bill Shen, Xinchi Qiu, Preslav Aleksandrov, Nicholas Lane. ICLR 2026."
   award_badge: "ICLR 2026 (Top 3%)"
@@ -29,9 +23,6 @@ mtdao-iclr-2026:
   artifact_links: []
 
 desloc-iclr-2026:
-  featured: true
-  featured_rank: 3
-  top_tier: true
   title: "DES-LOC: Desynced Low Communication Adaptive Optimizers for Training Foundation Models"
   citation: "Alex Iacob, Lorenzo Sani, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Samuel Horvath, Paris Giampouras, Bill Shen, Xinchi Qiu, Preslav Aleksandrov, Nicholas Lane. ICLR 2026."
   award_badge: "ICLR 2026 (Top 5%)"
@@ -42,9 +33,6 @@ desloc-iclr-2026:
   artifact_links: []
 
 future-federated-pretraining-neurips-2024:
-  featured: true
-  featured_rank: 4
-  top_tier: true
   title: "The Future of Large Language Model Pre-training is Federated"
   citation: "Lorenzo Sani, Alex Iacob, and collaborators. NeurIPS FL@FM Workshop 2024."
   award_badge: "Best Paper"
@@ -55,9 +43,6 @@ future-federated-pretraining-neurips-2024:
   artifact_links: []
 
 photon-mlsys-2025:
-  featured: false
-  featured_rank: 99
-  top_tier: true
   title: "Photon: Federated LLM Pre-Training"
   citation: "Lorenzo Sani, Alex Iacob, and collaborators. MLSys 2025."
   award_badge: ""
@@ -68,9 +53,6 @@ photon-mlsys-2025:
   artifact_links: []
 
 unlearning-neurips-2025:
-  featured: false
-  featured_rank: 99
-  top_tier: true
   title: "LLM Unlearning via Neural Activation Redirection"
   citation: "W. F. Shen, Xinchi Qiu, Meghdad Kurmanji, Alex Iacob, and collaborators. NeurIPS 2025."
   award_badge: ""
@@ -81,9 +63,6 @@ unlearning-neurips-2025:
   artifact_links: []
 
 multimodal-federated-har-2023:
-  featured: false
-  featured_rank: 99
-  top_tier: false
   title: "Robust and Private Multimodal Federated Human Activity Recognition"
   citation: "Alex Iacob and collaborators. MobiUK 2023."
   award_badge: ""

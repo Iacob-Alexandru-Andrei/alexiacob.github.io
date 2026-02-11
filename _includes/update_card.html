@@ -1,0 +1,30 @@
+{% assign item = include.item %}
+{% assign excerpt_chars = include.excerpt_chars | default: 180 %}
+{% assign channel_label = "Update" %}
+{% assign channel_class = "ri-channel-chip--update" %}
+{% if item.collection == "news" %}
+  {% assign channel_label = "News" %}
+  {% assign channel_class = "ri-channel-chip--news" %}
+{% elsif item.collection == "posts" %}
+  {% assign channel_label = "Blog" %}
+  {% assign channel_class = "ri-channel-chip--blog" %}
+{% elsif item.collection == "linkedin_posts" %}
+  {% assign channel_label = "LinkedIn" %}
+  {% assign channel_class = "ri-channel-chip--linkedin" %}
+{% elsif item.collection == "x_posts" %}
+  {% assign channel_label = "X" %}
+  {% assign channel_class = "ri-channel-chip--x" %}
+{% endif %}
+<article class="ri-update-card">
+  <p class="ri-update-meta">
+    <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%Y-%m-%d" }}</time>
+    <span class="ri-channel-chip {{ channel_class }}">{{ channel_label }}</span>
+  </p>
+  <h3><a href="{{ item.url | relative_url }}">{{ item.title | default: "Untitled update" }}</a></h3>
+  {% if item.excerpt %}
+    <p class="ri-update-excerpt">{{ item.excerpt | strip_html | truncate: excerpt_chars }}</p>
+  {% endif %}
+  {% if item.external_url and item.external_url != "" %}
+    <p class="ri-update-link"><a href="{{ item.external_url }}" rel="noopener noreferrer">Open original post</a></p>
+  {% endif %}
+</article>
