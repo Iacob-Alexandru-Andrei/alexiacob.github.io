@@ -113,6 +113,12 @@ scholar:
   query: "@*"
   sort_by: year
   order: descending
+  bibliography_template: >-
+    {% if entry.url and entry.url != "" %}
+      <a class="ri-bib-entry-link" href="{{ entry.url }}" rel="noopener noreferrer">{{ reference }}</a>
+    {% else %}
+      <span class="ri-bib-entry-text">{{ reference }}</span>
+    {% endif %}
 
 defaults:
   - scope:
