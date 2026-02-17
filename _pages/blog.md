@@ -34,9 +34,8 @@ nav_order: 3
         <p>Long-form notes will appear here. The live RSS endpoint is available at <a href="{{ '/feed.xml' | relative_url }}">/feed.xml</a>.</p>
         <ul class="ri-blog-empty-list">
           <li>Planned topics: optimization, distributed training, and practical ML systems.</li>
-          <li>For time-sensitive announcements, use the updates stream.</li>
+          <li>Selected publications and CV are available from the top navigation.</li>
         </ul>
-        <p><a class="ri-section-action" href="{{ '/updates/' | relative_url }}">Open updates stream</a></p>
       </article>
     {% endif %}
   </section>

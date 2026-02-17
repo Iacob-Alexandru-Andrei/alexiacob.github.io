@@ -1,0 +1,259 @@
+{
+  "rethinking-data-curation-llm-training-iclr-2026": {
+    "title": "Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods",
+    "citation": "Wanru Zhao, Yihong Chen, Wentao Ma, Yuzhi Tang, Shengchao Hu, Shell Xu Hu, Alex Iacob, Abhinav Mehrotra, Nicholas D. Lane. ICLR 2026.",
+    "venue": "ICLR",
+    "year": 2026,
+    "authors": [
+      "Wanru Zhao",
+      "Yihong Chen",
+      "Wentao Ma",
+      "Yuzhi Tang",
+      "Shengchao Hu",
+      "Shell Xu Hu",
+      "Alex Iacob",
+      "Abhinav Mehrotra",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "openreview:UFwnsmFZ6R",
+    "level": "conference"
+  },
+  "mtdao-iclr-2026": {
+    "title": "MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates",
+    "citation": "Alex Iacob, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Lorenzo Sani, Samuel Horváth, William F. Shen, Xinchi Qiu, Nicholas D. Lane. ICLR 2026.",
+    "venue": "ICLR",
+    "year": 2026,
+    "authors": [
+      "Alex Iacob",
+      "Andrej Jovanovic",
+      "Mher Safaryan",
+      "Meghdad Kurmanji",
+      "Lorenzo Sani",
+      "Samuel Horváth",
+      "William F. Shen",
+      "Xinchi Qiu",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "openreview:5yPP238v4c",
+    "level": "conference"
+  },
+  "desloc-iclr-2026": {
+    "title": "DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models",
+    "citation": "Alex Iacob, Lorenzo Sani, Mher Safaryan, Paris Giampouras, Samuel Horváth, Meghdad Kurmanji, Andrej Jovanovic, Preslav Aleksandrov, William F. Shen, Xinchi Qiu, Nicholas D. Lane. ICLR 2026.",
+    "venue": "ICLR",
+    "year": 2026,
+    "authors": [
+      "Alex Iacob",
+      "Lorenzo Sani",
+      "Mher Safaryan",
+      "Paris Giampouras",
+      "Samuel Horváth",
+      "Meghdad Kurmanji",
+      "Andrej Jovanovic",
+      "Preslav Aleksandrov",
+      "William F. Shen",
+      "Xinchi Qiu",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "openreview:6N2qFixxYZ",
+    "level": "conference"
+  },
+  "sparsyfed-sparse-adaptive-federated-learning-2025": {
+    "title": "SparsyFed: Sparse Adaptive Federated Learning",
+    "citation": "Adriano Guastella, Lorenzo Sani, Alex Iacob, Alessio Mora, Paolo Bellavista, Nicholas Donald Lane. ICLR 2025.",
+    "venue": "ICLR",
+    "year": 2025,
+    "authors": [
+      "Adriano Guastella",
+      "Lorenzo Sani",
+      "Alex Iacob",
+      "Alessio Mora",
+      "Paolo Bellavista",
+      "Nicholas Donald Lane"
+    ],
+    "dblp_key": "conf/iclr/GuastellaSIMBL25",
+    "level": "conference"
+  },
+  "photon-mlsys-2025": {
+    "title": "Photon: Federated LLM Pre-Training",
+    "citation": "Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Wanru Zhao, Dongqi Cai, Zexi Li, Xinchi Qiu, Nicholas D. Lane. MLSys 2025.",
+    "venue": "MLSys",
+    "year": 2025,
+    "authors": [
+      "Lorenzo Sani",
+      "Alex Iacob",
+      "Zeyu Cao",
+      "Royson Lee",
+      "Bill Marino",
+      "Yan Gao",
+      "Wanru Zhao",
+      "Dongqi Cai",
+      "Zexi Li",
+      "Xinchi Qiu",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "conf/mlsys/SaniICLM0Z00QL25",
+    "level": "conference"
+  },
+  "unlearning-neurips-2025": {
+    "title": "LUNAR: LLM Unlearning via Neural Activation Redirection",
+    "citation": "William F. Shen, Xinchi Qiu, Meghdad Kurmanji, Alex Iacob, Lorenzo Sani, Yihong Chen, Nicola Cancedda, Nicholas D. Lane. NeurIPS 2025.",
+    "venue": "NeurIPS",
+    "year": 2025,
+    "authors": [
+      "William F. Shen",
+      "Xinchi Qiu",
+      "Meghdad Kurmanji",
+      "Alex Iacob",
+      "Lorenzo Sani",
+      "Yihong Chen",
+      "Nicola Cancedda",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "openreview:teB4aqJsNP",
+    "level": "conference"
+  },
+  "dept-iclr-2025": {
+    "title": "DEPT: Decoupled Embeddings for Pre-training Language Models",
+    "citation": "Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, William F. Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, Nicholas Donald Lane. ICLR 2025.",
+    "venue": "ICLR",
+    "year": 2025,
+    "authors": [
+      "Alex Iacob",
+      "Lorenzo Sani",
+      "Meghdad Kurmanji",
+      "William F. Shen",
+      "Xinchi Qiu",
+      "Dongqi Cai",
+      "Yan Gao",
+      "Nicholas Donald Lane"
+    ],
+    "dblp_key": "conf/iclr/IacobSKSQ00L25",
+    "level": "conference"
+  },
+  "abbie-autoregressive-block-based-iterative-encoder-for-efficient-sequence-modeling-2025": {
+    "title": "AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling",
+    "citation": "Preslav Aleksandrov, Meghdad Kurmanji, Fernando García-Redondo, David O'Shea, William F. Shen, Alex Iacob, Lorenzo Sani, Xinchi Qiu, Nicola Cancedda, Nicholas D. Lane. CoRR 2025.",
+    "venue": "CoRR",
+    "year": 2025,
+    "authors": [
+      "Preslav Aleksandrov",
+      "Meghdad Kurmanji",
+      "Fernando García-Redondo",
+      "David O'Shea",
+      "William F. Shen",
+      "Alex Iacob",
+      "Lorenzo Sani",
+      "Xinchi Qiu",
+      "Nicola Cancedda",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "journals/corr/abs-2507-08567",
+    "level": "arxiv"
+  },
+  "worldwide-federated-training-neurips-2024": {
+    "title": "Worldwide Federated Training of Language Models",
+    "citation": "Alex Iacob, Lorenzo Sani, Bill Marino, Preslav Aleksandrov, William F. Shen, Nicholas Donald Lane. CoRR 2024.",
+    "venue": "CoRR",
+    "year": 2024,
+    "authors": [
+      "Alex Iacob",
+      "Lorenzo Sani",
+      "Bill Marino",
+      "Preslav Aleksandrov",
+      "William F. Shen",
+      "Nicholas Donald Lane"
+    ],
+    "dblp_key": "journals/corr/abs-2405-14446",
+    "level": "arxiv"
+  },
+  "future-federated-pretraining-neurips-2024": {
+    "title": "The Future of Large Language Model Pre-training is Federated",
+    "citation": "Lorenzo Sani, Alex Iacob, Zeyu Cao, Bill Marino, Yan Gao, Tomás Paulik, Wanru Zhao, William F. Shen, Preslav Aleksandrov, Xinchi Qiu, Nicholas D. Lane. CoRR 2024.",
+    "venue": "CoRR",
+    "year": 2024,
+    "authors": [
+      "Lorenzo Sani",
+      "Alex Iacob",
+      "Zeyu Cao",
+      "Bill Marino",
+      "Yan Gao",
+      "Tomás Paulik",
+      "Wanru Zhao",
+      "William F. Shen",
+      "Preslav Aleksandrov",
+      "Xinchi Qiu",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "journals/corr/abs-2405-10853",
+    "level": "arxiv"
+  },
+  "fedanchor-enhancing-federated-semi-supervised-learning-with-label-contrastive-loss-for-unlabeled-clients-2024": {
+    "title": "FedAnchor: Enhancing Federated Semi-Supervised Learning with Label Contrastive Loss for Unlabeled Clients",
+    "citation": "Xinchi Qiu, Yan Gao, Lorenzo Sani, Heng Pan, Wanru Zhao, Pedro P. B. de Gusmao, Mina Alibeigi, Alex Iacob, Nicholas D. Lane. CoRR 2024.",
+    "venue": "CoRR",
+    "year": 2024,
+    "authors": [
+      "Xinchi Qiu",
+      "Yan Gao",
+      "Lorenzo Sani",
+      "Heng Pan",
+      "Wanru Zhao",
+      "Pedro P. B. de Gusmao",
+      "Mina Alibeigi",
+      "Alex Iacob",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "journals/corr/abs-2402-10191",
+    "level": "arxiv"
+  },
+  "multimodal-federated-har-2023": {
+    "title": "Privacy in Multimodal Federated Human Activity Recognition",
+    "citation": "Alex Iacob, Pedro Porto Buarque de Gusmão, Nicholas D. Lane, Armand K. Koupai, Mohammud Junaid Bocus, Raúl Santos-Rodríguez, Robert J. Piechocki, Ryan McConville. CoRR 2023.",
+    "venue": "CoRR",
+    "year": 2023,
+    "authors": [
+      "Alex Iacob",
+      "Pedro Porto Buarque de Gusmão",
+      "Nicholas D. Lane",
+      "Armand K. Koupai",
+      "Mohammud Junaid Bocus",
+      "Raúl Santos-Rodríguez",
+      "Robert J. Piechocki",
+      "Ryan McConville"
+    ],
+    "dblp_key": "journals/corr/abs-2305-12134",
+    "level": "arxiv"
+  },
+  "high-throughput-simulation-of-federated-learning-via-resource-aware-client-placement-2023": {
+    "title": "High-throughput Simulation of Federated Learning via Resource-Aware Client Placement",
+    "citation": "Lorenzo Sani, Pedro Porto Buarque de Gusmão, Alex Iacob, Wanru Zhao, Xinchi Qiu, Yan Gao, Javier Fernández-Marqués, Nicholas Donald Lane. CoRR 2023.",
+    "venue": "CoRR",
+    "year": 2023,
+    "authors": [
+      "Lorenzo Sani",
+      "Pedro Porto Buarque de Gusmão",
+      "Alex Iacob",
+      "Wanru Zhao",
+      "Xinchi Qiu",
+      "Yan Gao",
+      "Javier Fernández-Marqués",
+      "Nicholas Donald Lane"
+    ],
+    "dblp_key": "journals/corr/abs-2306-17453",
+    "level": "arxiv"
+  },
+  "fair-federated-learning-euromlsys-2023": {
+    "title": "Can Fair Federated Learning Reduce the need for Personalisation?",
+    "citation": "Alex Iacob, Pedro Porto Buarque de Gusmão, Nicholas D. Lane. EuroMLSys@EuroSys 2023.",
+    "venue": "EuroMLSys@EuroSys",
+    "year": 2023,
+    "authors": [
+      "Alex Iacob",
+      "Pedro Porto Buarque de Gusmão",
+      "Nicholas D. Lane"
+    ],
+    "dblp_key": "conf/eurosys/IacobGL23",
+    "level": "workshop"
+  }
+}

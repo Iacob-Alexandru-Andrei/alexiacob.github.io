@@ -1,73 +1,159 @@
 dept-iclr-2025:
   title: "DEPT: Decoupled Embeddings for Pre-training Language Models"
-  citation: "Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, Bill Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, Nicholas Lane. ICLR 2025."
+  citation: "Alex Iacob, Lorenzo Sani, Meghdad Kurmanji, William F. Shen, Xinchi Qiu, Dongqi Cai, Yan Gao, Nicholas Donald Lane. ICLR 2025."
   award_badge: "ICLR 2025 Oral (Top 1.8%)"
-  tagline: "Memory-efficient embeddings for distributed pre-training."
+  tagline: "Decoupled embeddings for heterogeneous multilingual pre-training."
   summary: >-
-    Decouples embedding matrices from the transformer core to reduce memory
-    pressure while preserving flexibility for heterogeneous distributed data.
+    Decouples embeddings from the transformer body to pre-train on multilingual and multi-domain
+    corpora with lower memory and communication overhead.
   artifact_links:
-    - label: Paper
-      url: https://lnkd.in/eDkR7rdC
-    - label: Blog
-      url: https://lnkd.in/eC7qaKbE
+    - label: OpenReview
+      url: https://openreview.net/forum?id=2wKkhOH9Jf
+    - label: Flower blog post
+      url: https://flower.ai/blog/2025-04-17-decoupled-embeddings-for-pretraining/
 
 mtdao-iclr-2026:
   title: "MT-DAO: Multi-Timescale Distributed Adaptive Optimizers with Local Updates"
-  citation: "Alex Iacob, Lorenzo Sani, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Samuel Horvath, Paris Giampouras, Bill Shen, Xinchi Qiu, Preslav Aleksandrov, Nicholas Lane. ICLR 2026."
+  citation: "Alex Iacob, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Lorenzo Sani, Samuel Horváth, William F. Shen, Xinchi Qiu, Nicholas D. Lane. ICLR 2026."
   award_badge: "ICLR 2026 (Top 3%)"
-  tagline: "Multi-timescale adaptation under local update constraints."
+  tagline: "Multi-timescale local adaptive optimization under bandwidth limits."
   summary: >-
-    Sets a new state of the art for distributed training methods, with a
-    quasi-hyperbolic multi-timescale strategy that matches standard DDP.
-  artifact_links: []
+    Uses multi-timescale momentum tracking to match DDP quality in local-update
+    pre-training while reducing wall-clock in low-communication settings.
+  artifact_links:
+    - label: OpenReview
+      url: https://openreview.net/forum?id=5yPP238v4c
+    - label: arXiv
+      url: https://arxiv.org/abs/2510.05361
 
 desloc-iclr-2026:
-  title: "DES-LOC: Desynced Low Communication Adaptive Optimizers for Training Foundation Models"
-  citation: "Alex Iacob, Lorenzo Sani, Andrej Jovanovic, Mher Safaryan, Meghdad Kurmanji, Samuel Horvath, Paris Giampouras, Bill Shen, Xinchi Qiu, Preslav Aleksandrov, Nicholas Lane. ICLR 2026."
+  title: "DES-LOC: Desynced Low Communication Adaptive Optimizers for Foundation Models"
+  citation: "Alex Iacob, Lorenzo Sani, Mher Safaryan, Paris Giampouras, Samuel Horváth, Meghdad Kurmanji, Andrej Jovanovic, Preslav Aleksandrov, William F. Shen, Xinchi Qiu, Nicholas D. Lane. ICLR 2026."
   award_badge: "ICLR 2026 (Top 5%)"
-  tagline: "Adaptive optimization with sharply reduced synchronization costs."
+  tagline: "Desynced optimizer-state synchronization with convergence guarantees."
   summary: >-
-    Desynchronizes optimizer statistics to lower communication overhead while
-    preserving model quality in low-bandwidth distributed training.
+    Desynchronizes parameter and moment synchronization to provide provably convergent,
+    low-communication adaptive optimization for pre-training at large scales.
+  artifact_links:
+    - label: OpenReview
+      url: https://openreview.net/forum?id=6N2qFixxYZ
+    - label: arXiv
+      url: https://arxiv.org/abs/2505.22549
+
+rethinking-data-curation-llm-training-iclr-2026:
+  title: "Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods"
+  citation: "Wanru Zhao, Yihong Chen, Wentao Ma, Yuzhi Tang, Shengchao Hu, Shell Xu Hu, Alex Iacob, Abhinav Mehrotra, Nicholas D. Lane. ICLR 2026."
+  award_badge: ""
+  tagline: "Online data reweighting for stronger LLM generalization."
+  summary: >-
+    Shows that online reweighting during training generalizes better than
+    offline data-curation strategies for LLM pre-training.
   artifact_links: []
 
 future-federated-pretraining-neurips-2024:
   title: "The Future of Large Language Model Pre-training is Federated"
-  citation: "Lorenzo Sani, Alex Iacob, and collaborators. NeurIPS FL@FM Workshop 2024."
-  award_badge: "Best Paper"
-  tagline: "Federated pre-training trade-offs at model scale."
+  citation: "Lorenzo Sani, Alex Iacob, Zeyu Cao, Bill Marino, Yan Gao, Tomás Paulik, Wanru Zhao, William F. Shen, Preslav Aleksandrov, Xinchi Qiu, Nicholas D. Lane. CoRR 2024."
+  award_badge: ""
+  tagline: "A systems blueprint for federated billion-scale LLM pre-training."
   summary: >-
-    Proposes a hierarchical distributed mixture-of-experts system for
-    worldwide federated pre-training.
+    Presents federated LLM pre-training as a practical systems path and uses
+    Photon to show robust scaling under statistical heterogeneity, hardware
+    heterogeneity, and partial participation.
+  artifact_links: []
+
+worldwide-federated-training-neurips-2024:
+  title: "Worldwide Federated Training of Language Models"
+  citation: "Alex Iacob, Lorenzo Sani, Bill Marino, Preslav Aleksandrov, William F. Shen, Nicholas Donald Lane. CoRR 2024."
+  award_badge: "Best Paper (NeurIPS FL@FM 2024)"
+  tagline: "A hierarchical mixture-of-experts training approach."
+  summary: >-
+    Introduces WorldLM as a hierarchical mixture-of-experts approach for
+    language-model training on naturally heterogeneous data.
   artifact_links: []
 
 photon-mlsys-2025:
   title: "Photon: Federated LLM Pre-Training"
-  citation: "Lorenzo Sani, Alex Iacob, and collaborators. MLSys 2025."
+  citation: "Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Wanru Zhao, Dongqi Cai, Zexi Li, Xinchi Qiu, Nicholas D. Lane. MLSys 2025."
   award_badge: ""
-  tagline: "Production-minded federated LLM training."
+  tagline: "End-to-end federated LLM pre-training across weakly connected clusters."
   summary: >-
-    Presents a federated pre-training system focused on practical throughput and
-    deployment reliability in distributed infrastructure.
+    Photon is an end-to-end federated LLM pre-training system focused on
+    communication efficiency, heterogeneous hardware support, and resilience to
+    failures across distributed organizations.
   artifact_links: []
 
 unlearning-neurips-2025:
   title: "LLM Unlearning via Neural Activation Redirection"
-  citation: "W. F. Shen, Xinchi Qiu, Meghdad Kurmanji, Alex Iacob, and collaborators. NeurIPS 2025."
+  citation: "William F. Shen, Xinchi Qiu, Meghdad Kurmanji, Alex Iacob, Lorenzo Sani, Yihong Chen, Nicola Cancedda, Nicholas D. Lane. NeurIPS 2025."
   award_badge: ""
-  tagline: "Targeted forgetting via activation steering."
+  tagline: "Activation-space redirection for controllable LLM unlearning."
   summary: >-
-    Studies targeted unlearning in large language models by redirecting neural
-    activation patterns during adaptation.
+    LUNAR redirects activations of forget-set data toward non-answering regions,
+    improving the forgetting-versus-utility trade-off with controllable
+    inference-time behavior.
   artifact_links: []
 
 multimodal-federated-har-2023:
-  title: "Robust and Private Multimodal Federated Human Activity Recognition"
-  citation: "Alex Iacob and collaborators. MobiUK 2023."
+  title: "Privacy in Multimodal Federated Human Activity Recognition"
+  citation: "Alex Iacob, Pedro Porto Buarque de Gusmão, Nicholas D. Lane, Armand K. Koupai, Mohammud Junaid Bocus, Raúl Santos-Rodríguez, Robert J. Piechocki, Ryan McConville. CoRR 2023."
   award_badge: ""
-  tagline: "Privacy-preserving multimodal federated learning."
+  tagline: "Quantifying privacy granularity effects in federated HAR."
   summary: >-
-    Investigates robust multimodal federated-learning techniques for privacy-
-    preserving human activity recognition systems.
+    Quantifies privacy at user, environment, and modality levels in federated
+    HAR and proposes a training strategy that recovers much of the accuracy lost
+    under strict modality-level separation.
+  artifact_links: []
+
+sparsyfed-sparse-adaptive-federated-learning-2025:
+  title: "SparsyFed: Sparse Adaptive Federated Learning"
+  citation: "Adriano Guastella, Lorenzo Sani, Alex Iacob, Alessio Mora, Paolo Bellavista, Nicholas Donald Lane. ICLR 2025."
+  award_badge: ""
+  tagline: "Practical sparse FL under strong heterogeneity."
+  summary: >-
+    SparsyFed makes sparse federated training practical under strong
+    heterogeneity by improving mask adaptivity and reducing regrowth while
+    preserving accuracy at high sparsity.
+  artifact_links: []
+
+abbie-autoregressive-block-based-iterative-encoder-for-efficient-sequence-modeling-2025:
+  title: "AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling"
+  citation: "Preslav Aleksandrov, Meghdad Kurmanji, Fernando García-Redondo, David O'Shea, William F. Shen, Alex Iacob, Lorenzo Sani, Xinchi Qiu, Nicola Cancedda, Nicholas D. Lane. CoRR 2025."
+  award_badge: ""
+  tagline: "Recursive encoder iterations with dynamic test-time compute."
+  summary: >-
+    AbbIE is a recursive encoder architecture that scales compute through
+    iterative latent passes at inference time, improving perplexity and
+    in-context performance over fixed-depth baselines.
+  artifact_links: []
+
+fedanchor-enhancing-federated-semi-supervised-learning-with-label-contrastive-loss-for-unlabeled-clients-2024:
+  title: "FedAnchor: Enhancing Federated Semi-Supervised Learning with Label Contrastive Loss for Unlabeled Clients"
+  citation: "Xinchi Qiu, Yan Gao, Lorenzo Sani, Heng Pan, Wanru Zhao, Pedro P. B. de Gusmao, Mina Alibeigi, Alex Iacob, Nicholas D. Lane. CoRR 2024."
+  award_badge: ""
+  tagline: "Anchor-head contrastive supervision for federated SSL."
+  summary: >-
+    FedAnchor adds a server-side anchor head with label-contrastive supervision
+    to reduce pseudo-label bias and improve convergence and accuracy in
+    federated semi-supervised learning.
+  artifact_links: []
+
+high-throughput-simulation-of-federated-learning-via-resource-aware-client-placement-2023:
+  title: "Pollen: High-throughput Federated Learning Simulation via Resource-Aware Client Placement"
+  citation: "Lorenzo Sani, Pedro Porto Buarque de Gusmão, Alex Iacob, Wanru Zhao, Xinchi Qiu, Yan Gao, Javier Fernández-Marqués, Nicholas Donald Lane. CoRR 2023."
+  award_badge: ""
+  tagline: "Resource-aware scheduling for large-scale FL simulation."
+  summary: >-
+    Pollen accelerates federated-learning simulation with push-based client
+    placement and hardware-aware scheduling, improving utilization and reducing
+    end-to-end experiment time versus prior simulators.
+  artifact_links: []
+
+fair-federated-learning-euromlsys-2023:
+  title: "Can Fair Federated Learning Reduce the Need for Personalisation?"
+  citation: "Alex Iacob, Pedro Porto Buarque de Gusmão, Nicholas D. Lane. EuroMLSys@EuroSys 2023."
+  award_badge: ""
+  tagline: "Fairness-aware FL versus local personalization trade-offs."
+  summary: >-
+    Studies when fairness-aware federated optimization can reduce client disparity
+    enough to lessen dependence on post-hoc personalization for weaker clients.
   artifact_links: []

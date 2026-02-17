@@ -29,7 +29,7 @@ permalink: /about/
       {% for social in site.data.social_links %}
         {% if social.placeholder %}
           <article class="ri-link-card ri-link-card-muted">
-            <p>{{ social.label }}: configure</p>
+            <p>{{ social.label }}: unavailable</p>
           </article>
         {% else %}
           <article class="ri-link-card">

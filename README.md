@@ -4,11 +4,9 @@ Personal research website rebuilt with **al-folio as the core theme**.
 
 ## Features
 - al-folio-driven site structure and styling.
-- Home/About, Publications, CV, Blog, LinkedIn posts, and X posts routes.
+- Home/About, Publications, CV, and Blog routes.
 - Data-driven publications and CV from `_data/*.yml`.
-- Deterministic social post collections:
-  - `_linkedin_posts/*`
-  - `_x_posts/*`
+- CV and publication sync automation from canonical LaTeX + DBLP sources.
 - RSS feed at `/feed.xml`.
 
 ## Content Editing
@@ -41,19 +39,25 @@ Open:
 http://127.0.0.1:4000/
 ```
 
-## Sync Workflow
+## CV + Publications Sync
 
-Run from the global repo root:
+Run locally from the website repo root:
 
 ```bash
-uv run python scripts/writing/sync_website_content.py \
-  --website-dir /Users/iacobalexandru/projects/global/alexiacob.github.io \
-  --linkedin-dir /Users/iacobalexandru/projects/global/linkedin_posts \
-  --x-dir /Users/iacobalexandru/projects/global/twitter_posts \
-  --cv-tex /Users/iacobalexandru/projects/global/alex_iacob_cv/main.tex \
-  --build-cv-pdf
+python3 scripts/sync_cv_and_publications.py \
+  --cv-source-file /path/to/Standard_CV_2023/main.tex
 ```
 
-This synchronizes LinkedIn/X markdown social posts and CV TeX/PDF artifacts.
-Each synced post contains an `external_url` front matter field. Add your
-public social URL there (for example, the final LinkedIn/X post URL).
+This updates:
+
+- `assets/cv/main.tex` (canonical LaTeX source copy)
+- `_data/cv.yml` (website CV sections generated from LaTeX)
+- `_bibliography/papers.bib` (DBLP-backed bibliography with venue-priority dedupe)
+- `_data/publication_citations.json` (BibTeX-derived citation strings for homepage cards)
+
+Automation is configured in:
+
+- `.github/workflows/sync-cv-publications.yml`
+
+If `Iacob-Alexandru-Andrei/Standard_CV_2023` is private, set a `CV_SYNC_TOKEN`
+repository secret so the workflow can read it.
