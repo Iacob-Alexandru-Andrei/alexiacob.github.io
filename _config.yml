@@ -18,7 +18,6 @@ social:
   name: Alex Iacob
   links:
     - https://github.com/Iacob-Alexandru-Andrei
-    - https://www.linkedin.com/in/alex-iacob-898775194/
     - https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en
 
 url: "https://alexiacob.github.io"
@@ -52,12 +51,6 @@ blog_description: Notes on machine learning research, optimization, and model de
 permalink: /blog/:year/:title/
 
 collections:
-  linkedin_posts:
-    output: true
-    permalink: /social/linkedin/:slug/
-  x_posts:
-    output: true
-    permalink: /social/x/:slug/
   news:
     defaults:
       layout: post
@@ -127,15 +120,4 @@ defaults:
       seo:
         links:
           - https://github.com/Iacob-Alexandru-Andrei
-          - https://www.linkedin.com/in/alex-iacob-898775194/
           - https://scholar.google.com/citations?user=m86W6CQAAAAJ&hl=en
-  - scope:
-      path: ""
-      type: linkedin_posts
-    values:
-      layout: social_item
-  - scope:
-      path: ""
-      type: x_posts
-    values:
-      layout: social_item

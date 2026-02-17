@@ -36,13 +36,13 @@
   {% if empty_variant == "panel" %}
     <div class="ri-panel ri-empty-state">
       <h2>{{ include.empty_title | default: "No updates available yet" }}</h2>
-      <p>{{ include.empty_text | default: "Publish a news item, blog post, or synced social entry to populate this stream." }}</p>
+      <p>{{ include.empty_text | default: "News, blog posts, and social updates will appear here as they are published." }}</p>
     </div>
   {% else %}
     <div class="ri-grid ri-updates-grid">
       <article class="ri-update-card">
         <h3>{{ include.empty_title | default: "No updates yet" }}</h3>
-        <p>{{ include.empty_text | default: "Run the sync script to ingest LinkedIn and X items, or publish blog/news entries." }}</p>
+        <p>{{ include.empty_text | default: "New updates will appear here as they are published." }}</p>
       </article>
 
       {% if include.cta_title and include.cta_href %}

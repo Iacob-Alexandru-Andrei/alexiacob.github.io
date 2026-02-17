@@ -3,13 +3,13 @@ hero:
   title: Machine learning research from core methods to scalable systems.
   lede: >-
     I work on optimization and large-scale model training across geographically
-    distributed infrastructure. My current projects emphasize efficient training
+    distributed infrastructure. My current projects emphasize bandwidth and memory-efficient training
     and robust performance in realistic resource-constrained environments.
-  links_intro: For current work and activity, start with
+  links_intro: For current work and writing, start with
   publications_label: papers
   publications_url: /publications/
-  updates_label: updates
-  updates_url: /updates/
+  blog_label: blog
+  blog_url: /blog/
   ctas:
     - label: Email
       link_id: email
@@ -19,19 +19,9 @@ hero:
       link_id: google_scholar
     - label: GitHub
       link_id: github
-    - label: LinkedIn
-      link_id: linkedin
+    - label: X
+      link_id: x
 
 featured_publications:
   title: Selected Publications
   limit: 5
-
-updates:
-  title: Latest Updates
-  limit: 5
-  excerpt_chars: 160
-  empty_title: No updates yet
-  empty_text: Run the sync script to ingest LinkedIn and X items, or publish blog/news entries.
-  cta_title: View All Updates
-  cta_href: /updates/
-  cta_text: Browse the complete stream across news, writing, and social posts.

@@ -1,0 +1,58 @@
+name: Sync CV and Publications
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Checkout CV source repo (with PAT)
+        if: ${{ secrets.CV_SYNC_TOKEN != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: Iacob-Alexandru-Andrei/Standard_CV_2023
+          path: .tmp/standard_cv
+          token: ${{ secrets.CV_SYNC_TOKEN }}
+
+      - name: Checkout CV source repo (default token)
+        if: ${{ secrets.CV_SYNC_TOKEN == '' }}
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Iacob-Alexandru-Andrei/Standard_CV_2023
+          path: .tmp/standard_cv
+
+      - name: Sync CV + publications data
+        run: |
+          if [ -f .tmp/standard_cv/main.tex ]; then
+            python3 scripts/sync_cv_and_publications.py --cv-source-file .tmp/standard_cv/main.tex
+          else
+            echo "CV source repo unavailable in this run; syncing from existing assets/cv/main.tex."
+            python3 scripts/sync_cv_and_publications.py --cv-source-file assets/cv/main.tex
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/cv/main.tex _data/cv.yml _bibliography/papers.bib _data/publication_citations.json
+          git commit -m "chore: sync CV and publications"
+          git push

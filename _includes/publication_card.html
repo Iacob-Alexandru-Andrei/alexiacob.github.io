@@ -1,8 +1,23 @@
 {% assign bib_key = include.key %}
 {% assign meta = include.meta %}
+{% assign bib = site.data.publication_citations[bib_key] %}
+
+{% assign card_title = meta.title %}
+{% if bib and bib.title and bib.title != "" %}
+  {% assign card_title = bib.title %}
+{% endif %}
+{% if card_title == nil or card_title == "" %}
+  {% assign card_title = bib_key %}
+{% endif %}
+
+{% assign card_citation = meta.citation %}
+{% if bib and bib.citation and bib.citation != "" %}
+  {% assign card_citation = bib.citation %}
+{% endif %}
+
 <article class="ri-pub-card">
   <header class="ri-pub-card-head">
-    <h3>{{ meta.title | default: bib_key }}</h3>
+    <h3>{{ card_title }}</h3>
   </header>
 
   {% if meta.award_badge and meta.award_badge != "" %}
@@ -15,19 +30,12 @@
     <p class="ri-pub-tagline">{{ meta.tagline }}</p>
   {% endif %}
 
-  {% if meta.citation and meta.citation != "" %}
-    <p class="ri-pub-citation">{{ meta.citation }}</p>
+  {% if card_citation and card_citation != "" %}
+    <p class="ri-pub-citation">{{ card_citation }}</p>
   {% endif %}
 
   {% if meta.summary and meta.summary != "" %}
     <p class="ri-pub-summary">{{ meta.summary }}</p>
   {% endif %}
 
-  {% if meta.artifact_links and meta.artifact_links.size > 0 %}
-    <ul class="ri-artifact-list">
-      {% for artifact in meta.artifact_links %}
-        <li><a href="{{ artifact.url }}" rel="noopener noreferrer">{{ artifact.label }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
 </article>
