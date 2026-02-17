@@ -8,7 +8,7 @@ dept-iclr-2025:
     corpora with lower memory and communication overhead.
   artifact_links:
     - label: OpenReview
-      url: https://openreview.net/forum?id=2wKkhOH9Jf
+      url: https://openreview.net/forum?id=vf5aUZT0Fz
     - label: arXiv
       url: https://arxiv.org/abs/2410.05021
     - label: Flower blog post
