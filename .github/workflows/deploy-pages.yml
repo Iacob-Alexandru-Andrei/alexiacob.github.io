@@ -32,10 +32,11 @@ jobs:
         run: |
           owner="$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')"
           repo="${GITHUB_REPOSITORY#*/}"
-          if [ "$repo" = "${owner}.github.io" ]; then
+          repo_lc="$(echo "${repo}" | tr '[:upper:]' '[:lower:]')"
+          if [ "$repo_lc" = "${owner}.github.io" ]; then
             baseurl=""
           else
-            baseurl="/${repo}"
+            baseurl="/${repo_lc}"
           fi
 
           cat > _config_deploy.yml <<EOF
