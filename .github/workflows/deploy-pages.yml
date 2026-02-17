@@ -29,7 +29,21 @@ jobs:
           bundler-cache: true
 
       - name: Build site with Jekyll
-        run: bundle exec jekyll build --baseurl "/alexiacob.github.io"
+        run: |
+          owner="$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')"
+          repo="${GITHUB_REPOSITORY#*/}"
+          if [ "$repo" = "${owner}.github.io" ]; then
+            baseurl=""
+          else
+            baseurl="/${repo}"
+          fi
+
+          cat > _config_deploy.yml <<EOF
+          url: "https://${owner}.github.io"
+          baseurl: "${baseurl}"
+          EOF
+
+          bundle exec jekyll build --config _config.yml,_config_deploy.yml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
